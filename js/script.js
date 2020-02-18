@@ -87,7 +87,7 @@ console.log("in addEventListener before - allCategoriesUrl=" + allCategoriesUrl)
 
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  buildAndShowHomeHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
+  buildAndShowHomeHTML(categories), // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitly setting the flag to get JSON from server processed into an object literal
 console.log("in addEventListener after buildAndShowHomeHTML ");
 }
