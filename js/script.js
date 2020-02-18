@@ -100,6 +100,8 @@ console.log("in addEventListener after buildAndShowHomeHTML = " + buildAndShowHo
 function buildAndShowHomeHTML (categories) {
 
   console.log("inside buildAndShowHomeHTML   ");
+  console.log(categories);
+  
 
   // Load home snippet page;
   $ajaxUtils.sendGetRequest(
