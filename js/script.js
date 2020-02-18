@@ -89,7 +89,7 @@ $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
   buildAndShowHomeHTML(), // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitly setting the flag to get JSON from server processed into an object literal
-console.log("in addEventListener after buildAndShowHomeHTML = " + buildAndShowHomeHTML());
+console.log("in addEventListener after buildAndShowHomeHTML ");
 }
 );
 // *** finish **
@@ -99,9 +99,9 @@ console.log("in addEventListener after buildAndShowHomeHTML = " + buildAndShowHo
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
 
-  console.log("inside buildAndShowHomeHTML   ");
+  console.log("inside buildAndShowHomeHTML     ");
   console.log(categories);
-  
+
 
   // Load home snippet page;
   $ajaxUtils.sendGetRequest(
