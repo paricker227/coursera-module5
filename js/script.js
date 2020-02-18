@@ -83,13 +83,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // *** start ***
 // On first load, show home view
 showLoading("#main-content");
-console.log("in addEventListener");
 
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
   buildAndShowHomeHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitly setting the flag to get JSON from server processed into an object literal
-console.log("in addEventListener after buildAndShowHomeHTML ");
 }
 );
 // *** finish **
@@ -99,15 +97,11 @@ console.log("in addEventListener after buildAndShowHomeHTML ");
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
 
-  console.log("inside buildAndShowHomeHTML     ");
-
-
   // Load home snippet page;
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
 
-      console.log("inside homeHtml  ");
 
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
@@ -144,11 +138,8 @@ function buildAndShowHomeHTML (categories) {
 // Given array of category objects, returns a random category object.
 function chooseRandomCategory (categories) {
   // Choose a random index into the array (from 0 inclusively until array length (exclusively))
-  console.log("inside chooseRandomCategory");
 
   var randomArrayIndex = Math.floor(Math.random() * categories.length);
-
-  console.log("in chooseRandomCategory randomArrayIndex = " + randomArrayIndex);
 
   // return category object with that randomArrayIndex
   return categories[randomArrayIndex];
