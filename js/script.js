@@ -85,7 +85,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 console.log("in addEventListener");
 
-  var buildAndShowHTML_value = buildAndShowHomeHTML();
+  var buildAndShowHTML_value = buildAndShowHomeHTML(categories);
+  console.log("after running buildAndShowHomeHTML");
+  
 
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
