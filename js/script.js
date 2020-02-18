@@ -100,7 +100,6 @@ console.log("in addEventListener after buildAndShowHomeHTML ");
 function buildAndShowHomeHTML (categories) {
 
   console.log("inside buildAndShowHomeHTML     ");
-  console.log("cat=" + categories);
 
 
   // Load home snippet page;
